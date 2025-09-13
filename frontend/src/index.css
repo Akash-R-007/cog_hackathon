@@ -1,0 +1,52 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Print Styles for PDF */
+@media print {
+  @page {
+    margin: 0.5in;
+    size: A4;
+  }
+  
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .print\:break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .print\:break-after-page {
+    break-after: page;
+    page-break-after: always;
+  }
+  
+  /* Ensure table doesn't break across pages inappropriately */
+  table {
+    break-inside: auto;
+  }
+  
+  tr {
+    break-inside: avoid;
+    break-after: auto;
+  }
+  
+  /* Hide screen-only elements */
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  /* Ensure full width for print */
+  .print\:w-full {
+    width: 100% !important;
+  }
+  
+  /* Smaller text for print */
+  .print\:text-xs {
+    font-size: 0.75rem !important;
+  }
+}
