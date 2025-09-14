@@ -3,20 +3,20 @@
 import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
 import Transactions from "./pages/Transactions";
 import Reports from "./components/Reports";
 import Settings from "./components/Settings";
 
 function App() {
-  const [activePage, setActivePage] = useState("home");
+  const [activePage, setActivePage] = useState("dashboard");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   const renderPage = () => {
     switch (activePage) {
-      case "home":
-        return <Home />;
+      case "dashboard":
+        return <Dashboard />;
       case "transactions":
         return <Transactions />;
       case "reports":
@@ -26,7 +26,7 @@ function App() {
       case "profile":
         return <h1 className="p-6">User Profile (Coming Soon)</h1>;
       default:
-        return <Home />;
+        return <Dashboard />;
     }
   };
 

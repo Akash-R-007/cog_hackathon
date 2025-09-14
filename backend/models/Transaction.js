@@ -21,4 +21,4 @@ const transactionSchema = new mongoose.Schema({
   }]
 });
 
-export default mongoose.model("Account", transactionSchema, "accounts");
+export default transactionSchema;

@@ -8,11 +8,11 @@ const DashboardSummary = ({ totalTransactions, totalBalance, fraudAlerts }) => (
     </div>
     <div className="bg-white rounded shadow p-6 flex flex-col items-center border border-gray-200 text-gray-700">
       <span className="text-gray-500">Total Balance</span>
-      <span className="text-2xl font-bold">${totalBalance.toLocaleString()}</span>
+      <span className="text-2xl font-bold">₹{totalBalance.toLocaleString()}</span>
     </div>
     <div className="bg-white rounded shadow p-6 flex flex-col items-center border border-gray-200 text-gray-700">
       <span className="text-gray-500">Fraud Alerts</span>
-      <span className="text-2xl font-bold text-red-500">{fraudAlerts.length}</span>
+      <span className="text-2xl font-bold text-red-500">{fraudAlerts}</span>
     </div>
   </div>
 );

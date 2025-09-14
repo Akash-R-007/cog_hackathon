@@ -34,9 +34,9 @@ const Sidebar = ({ setActivePage, sidebarOpen, setSidebarOpen, sidebarCollapsed,
         </button>
       </div>
       <nav className="flex-1 p-4 space-y-2">
-  <button onClick={() => { setActivePage("home"); setSidebarOpen(false); }} className={`block w-full text-left p-2 hover:bg-gray-700 rounded ${sidebarCollapsed ? "text-center" : ""}`}>{sidebarCollapsed ? <span title="Home">🏠</span> : "Home"}</button>
+        <button onClick={() => { setActivePage("dashboard"); setSidebarOpen(false); }} className={`block w-full text-left p-2 hover:bg-gray-700 rounded ${sidebarCollapsed ? "text-center" : ""}`}>{sidebarCollapsed ? <span title="Dashboard">📊</span> : "Dashboard"}</button>
         <button onClick={() => { setActivePage("transactions"); setSidebarOpen(false); }} className={`block w-full text-left p-2 hover:bg-gray-700 rounded ${sidebarCollapsed ? "text-center" : ""}`}>{sidebarCollapsed ? <span title="Transactions">💳</span> : "Transactions"}</button>
-        <button onClick={() => { setActivePage("reports"); setSidebarOpen(false); }} className={`block w-full text-left p-2 hover:bg-gray-700 rounded ${sidebarCollapsed ? "text-center" : ""}`}>{sidebarCollapsed ? <span title="Reports">📊</span> : "Reports"}</button>
+        <button onClick={() => { setActivePage("reports"); setSidebarOpen(false); }} className={`block w-full text-left p-2 hover:bg-gray-700 rounded ${sidebarCollapsed ? "text-center" : ""}`}>{sidebarCollapsed ? <span title="Reports">�</span> : "Reports"}</button>
         <button onClick={() => { setActivePage("settings"); setSidebarOpen(false); }} className={`block w-full text-left p-2 hover:bg-gray-700 rounded ${sidebarCollapsed ? "text-center" : ""}`}>{sidebarCollapsed ? <span title="Settings">⚙️</span> : "Settings"}</button>
         <button onClick={() => { setActivePage("profile"); setSidebarOpen(false); }} className={`block w-full text-left p-2 hover:bg-gray-700 rounded ${sidebarCollapsed ? "text-center" : ""}`}>{sidebarCollapsed ? <span title="Profile">👤</span> : "Profile"}</button>
       </nav>
